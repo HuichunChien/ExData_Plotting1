@@ -1,5 +1,5 @@
 # Plot1.R
-data=read.table("household_power_consumption.txt", sep=";", header=TRUE)
+data=read.table("household_power_consumption.txt", na.strings = "?", sep=";", header=TRUE)
 
 #get subdata with data are 1/2/2007 and 2/2/2007
 subdata<-subset(data,Date==c('1/2/2007')|Date==c('2/2/2007'), select=c(Global_active_power,Global_reactive_power,Voltage,Global_intensity ,Sub_metering_1,Sub_metering_2,Sub_metering_3))
