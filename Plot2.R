@@ -6,7 +6,7 @@ subdata<-subset(data,data$Date=='1/2/2007'|data$Date=='2/2/2007', select=c(Date,
 subdata$Date<-as.Date(subdata$Date,format="%d/%m/%Y")
 datetime<-(paste(subdata$Date,subdata$Time, sep=" "))
 subdata$datetime<-as.factor(datetime)
-# plot plot1.png
+# plot plot2.png
 png("plot2.png", height=480, width=480)
 plot(subdata$datetime,subdata$Global_active_power,type="l", xaxt="n", ylab="Global active power(kilowatts)")
 lines(subdata$datetime,subdata$Global_active_power,ylab="Global Active Power (kilowatts)")
