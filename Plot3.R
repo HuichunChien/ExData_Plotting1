@@ -6,7 +6,7 @@ subdata<-subset(data,data$Date=='1/2/2007'|data$Date=='2/2/2007', select=c(Date,
 subdata$Date<-as.Date(subdata$Date,format="%d/%m/%Y")
 datetime<-(paste(subdata$Date,subdata$Time, sep=" "))
 subdata$datetime<-as.factor(datetime)
-# plot plot1.png
+# plot plot3.png
 png("plot3.png", height=480, width=480)
 plot(subdata$datetime,subdata$Sub_metering_1,type="l", xaxt="n", ylab="Energy sub metering")
 lines(subdata$datetime,subdata$Sub_metering_1, col="black", ylab="Energy sub metering")
